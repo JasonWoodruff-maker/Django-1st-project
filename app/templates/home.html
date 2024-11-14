@@ -8,9 +8,11 @@ Hi {{ user.username }}!
 <form action="{% url 'logout' %}" method="post">
   {% csrf_token %}
   <button type="submit">Log Out</button>
+  <a href="{% url 'addrecipe' %}"> Add a Recipe</a>
 </form>
 {% else %}
 <p>You are not logged in</p>
 <a href="{% url 'login' %}">Log In</a>
+<a href="{% url 'signup' %}">Sign-Up</a>
 {% endif %}
 {% endblock %}
