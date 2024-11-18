@@ -19,3 +19,8 @@ def add_recipe(request):
     else:
         print("invalid")
         return render(request, "addrecipe.html", {"form": form})
+
+
+def view_all(request):
+    n = recipe1.objects.all()
+    return render(request, "viewall.html", {"n": n})

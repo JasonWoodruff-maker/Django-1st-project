@@ -25,9 +25,6 @@ urlpatterns = [
     path("accounts/", include("accounts.url")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
-    path(
-        "addrecipe/",
-        add_recipe,
-        name="addrecipe",
-    ),
+    path( "addrecipe/", add_recipe, name="addrecipe"),
+    path("viewall/",view_all, name="view_all1" )
 ]

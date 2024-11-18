@@ -1,4 +1,41 @@
-main{
-    justify-content: flex;
-    text-align: center;
+main {
+  justify-content: flex;
+  text-align: center;
+}
+.top {
+  margin-top: 10vh;
+}
+.page_viewall {
+  justify-content: center;
+  align-items: center;
+}
+.rec_header {
+  text-align: justify;
+  justify-content: center;
+  display: flex;
+}
+.recipes {
+  border: 1px solid black;
+  width: max-content;
+  margin-bottom: 3vh;
+}
+.nav {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign-btn {
+  margin-top: 3vh;
+}
+.login {
+  align-self: flex-end !important;
+}
+.signup{
+    margin-right: 2vw;
 }

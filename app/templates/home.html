@@ -4,11 +4,9 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-Hi {{ user.username }}!
-<form action="{% url 'logout' %}" method="post">
-  {% csrf_token %}
-  <button type="submit">Log Out</button>
+<p class="top">Hi {{ user.username }}!</p>
   <a href="{% url 'addrecipe' %}"> Add a Recipe</a>
+  <a href="{% url 'view_all1' %}"> View all recipes</a>
 </form>
 {% else %}
 <p>You are not logged in</p>

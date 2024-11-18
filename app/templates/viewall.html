@@ -1,0 +1,9 @@
+{% extends "base.html" %} {%load static%} {% block content %}
+<h1 class="rec_header top">Your recipes</h1>
+{% for n in n %}
+<div class="recipes">
+  name: {{ n.name1 }}<br />
+  Ingredients: {{ n.ingr1 }}<br />
+  Description:{{ n.Desc1 }}
+</div>
+{% endfor %} {% endblock %}
