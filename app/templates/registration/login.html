@@ -1,12 +1,39 @@
-{% extends "base.html" %}
-
-{% block title %}Login{% endblock %}
-
-{% block content %}
-<h2>Log In</h2>
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content %}
+<h2 class="login-header">Login</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form }}
-  <button type="submit">Log In</button>
+  <div class="log-box">
+    <p class="log-user">{{form.username.label}}</p>
+    {{form.username}}
+    <p class="log-pass">{{form.password.label}}</p>
+    {{form.password}}
+    <br /><button type="submit" class="log-btn">Login</button>
+  </div>
 </form>
+<footer>
+  <pre class="ton_links">
+      <a href="url" class="ton_links1">Privacy Pledge</a> 
+      <a href="url" class="ton_links2">Security</a>
+      <a href="url" class="ton_links3">Notice at Collection</a>
+      <a href="url" class="ton_links4">Terms and Conditions</a>
+      <a href="url" class="ton_links5"> Online Tracking & Advertising </a>
+      <a href="url" class="ton_links6">Accessible Cooking</a>
+      <a href="url" class="ton_links7">Leave Feedback</a>
+      <a href="url" class="ton_links8">Contact Us </a>
+  </pre>
+  <div>
+    <pre class="cont_cont">
+  Call <a href="tel:1-800-734-4667" class="cont1">1-267-436-5109</a> or visit <a href="url" class="cont1">Gourmet Help & Support.</a>
+      </pre>
+  </div>
+  <div class="last_txt">
+    <p class="year">©2024 Gourmet Reserve. All Rights Reserved.</p>
+  </div>
+
+  <p class="info">
+    Gourmet, the Gourmet logo and the  recipes are registered trademarks
+    of Gourmet Reserve. The LifeGreen color is a trademark of Gourmet reserve. Equal
+    Housing Lender logo FDIC logo
+  </p>
+</footer>
 {% endblock %}

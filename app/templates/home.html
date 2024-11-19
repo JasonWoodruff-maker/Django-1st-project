@@ -1,15 +1,34 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
-<p class="top">Hi {{ user.username }}!</p>
-  <a href="{% url 'addrecipe' %}"> Add a Recipe</a>
-  <a href="{% url 'view_all1' %}"> View all recipes</a>
-</form>
+    <img src="{% static "images/logo.png" %}" class="homeimg top"/><br>
+    <a href="{% url 'addrecipe' %}" > <button class="homelog">Add a Recipe</button></a>
+    <a href="{% url 'view_all1' %}" > <button class="homelog">View all recipes</button></a>
+  </form>
+  <p class="home-desc">
+    Welcome to Gourmet Reserve, the ultimate online destination for food lovers who want to preserve and explore their culinary creations. Whether you're a seasoned chef or a home cook, Gourmet Reserve is the perfect place to save, organize, and discover recipes you'll love—forever.
+
+Our easy-to-use platform allows you to:
+
+    Save Your Favorite Recipes: Never lose a recipe again. Simply bookmark recipes from any website, blog, or source, and they’ll be stored safely in your personal recipe collection.
+
+    Organize Your Collection: Group your recipes by meal type, cuisine, difficulty level, or any custom category you choose. Find what you’re looking for in seconds, whether it’s a quick weekday dinner or a special occasion feast.
+
+    Discover New Recipes: Browse through a curated collection of gourmet dishes, innovative meals, and popular favorites. With new recipes added regularly, there’s always something fresh to try.
+
+    Create Custom Recipe Notes: Make your recipes your own. Add your personal twists, notes, or modifications, so every dish turns out exactly how you like it.
+
+    Access Anytime, Anywhere: Whether you're on your phone, tablet, or computer, your Gourmet Reserve collection is available at your fingertips. Take your recipe box wherever you go, and never forget that perfect dish again.
+
+With Gourmet Reserve, you'll have a trusted digital kitchen assistant at your side—helping you curate, save, and perfect your culinary creations for years to come. Start building your collection today!
+
+  </p>
 {% else %}
-<p>You are not logged in</p>
+<p class="top">You are not logged in</p>
 <a href="{% url 'login' %}">Log In</a>
 <a href="{% url 'signup' %}">Sign-Up</a>
 {% endif %}
