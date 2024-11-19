@@ -278,3 +278,18 @@ main {
   margin: auto;
   text-align: center;
 }
+.recipe-box{
+  border: 2px solid black;
+  width: max-content;
+  display: table;
+  margin: 0 auto;
+  border-radius: 10%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  text-align: end;
+  margin-top: 20vh;
+}
+.rec-btn{
+  margin-right: 6vw;
+}
+

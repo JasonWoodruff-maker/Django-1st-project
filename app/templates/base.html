@@ -12,7 +12,8 @@
     <main>
       <div class="nav">
         <a href="{% url 'home' %}" class="home_but"
-          ><img src="{% static "/images/logo.png" %}" class="home-img"/></a>
+          ><img src="{% static "/images/logo.png" %}" class="home-img"/></a
+        >
         <div class="login-container">
           {% if user.is_authenticated %}
           <form action="{% url 'logout' %}" method="post">
